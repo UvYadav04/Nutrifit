@@ -51,7 +51,7 @@ export default function Treatment() {
                         </ul>
                     </div>
                 </div>
-                <div className="row bg bg-transparent common mt-3">
+                <div className="row bg bg-transparent common mt-3 justify-content-around">
                     <Diseasecard from="treat" name="backpain" />
                     <Diseasecard from="treat" name="insomnia" />
                     <Diseasecard from="treat" name="nausea" />

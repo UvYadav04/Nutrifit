@@ -28,21 +28,21 @@ export default function DietCard({ mineral, image }) {
     }, [])
     return (
         <div className="dietbox  mb-3 position-relative bg bg-dark" >
-            <div className="position-absolute center d-flex justify-content-center align-items-center">
+            <div className="position-absolute center d-flex justify-content-center align-items-center d-sm-flex d-none">
                 <img src={images[0]} width={200} height={200} style={{ borderRadius: 500 }} alt="" />
             </div>
             <div className="position-absolute bg bg-transparent name d-flex justify-content-center text-white align-items-center">
-                <img src={image} className='w-100' alt="" />
+                <img src={image} className='w-100 ' alt="" />
             </div>
             <div className="position-absolute minname text-white bottom-0 ">
-                <h1 className='top opacity-50 ms-3'>{mineral}</h1>
+                <h1 className='top opacity-50 ms-3 fs-sm-1 fs-2'>{mineral}</h1>
             </div>
-            <div className={enable ? "center d-flex flex-row position-absolute justify-content-center align-items-center" : "d-none"}>
-                <div className="info3 d-flex justify-content-around align-items-center">
-                    <div className="image p-3">
-                        <img src={pic} width={200} height={200} style={{ borderRadius: 500 }} alt="" />
+            <div className={enable ? "center  d-flex flex-row position-absolute justify-content-center align-items-center flex-wrap" : "d-none"}>
+                <div className="info3 w-100 mx-md-5 mx-3 d-flex justify-content-around align-items-center">
+                    <div className="image p-3 d-md-inline d-none">
+                        <img src={pic} width={200} height={200} style={{ borderRadius: 100 }} alt="" />
                     </div>
-                    <div className="info2  p-4 position-relative">
+                    <div className="info2 p-4 position-relative">
                         <button className='position-absolute top-0 end-0' onClick={() => makeenable(false)}>close</button>
                         <h2 className='heads'>{info.Name}</h2>
                         <h4 className='heads'>Consumption: <h6 className='d-inline'>{info.Consumption}</h6></h4>
@@ -54,9 +54,9 @@ export default function DietCard({ mineral, image }) {
                     </div>
                 </div>
             </div>
-            <div className="slide container w-100  d-flex align-items-center flex-column justify-content-center gap-4">
-                <div className="row justify-content-around  px-5 pb-0  w-100">
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+            <div className="slide container d-sm-flex d-none w-100 d-flex align-items-center flex-column justify-content-center gap-md-4 gap-3">
+                <div className="row justify-content-md-around justify-content-between  px-md-5 px-0 pb-0 gap-3   w-100">
+                    <div className="col-3 one  p-0" onClick={() => {
 
                         setinfo(data[0])
                         setpic(images[0])
@@ -69,7 +69,7 @@ export default function DietCard({ mineral, image }) {
                             makeenable(true)
                         }} />
                     </div>
-                    <div className="col-3 one two  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one two  p-0" onClick={() => {
 
                         setinfo(data[1])
                         setpic(images[1])
@@ -82,7 +82,7 @@ export default function DietCard({ mineral, image }) {
                             makeenable(true)
                         }} />
                     </div>
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one   p-0" onClick={() => {
                         setinfo(data[2])
                         setpic(images[2])
                         makeenable(true)
@@ -92,14 +92,14 @@ export default function DietCard({ mineral, image }) {
 
                 </div>
                 <div className="row justify-content-between  w-100">
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one   p-0" onClick={() => {
 
                         setinfo(data[3])
                         setpic(images[3])
                         makeenable(true)
                     }}    >
                         <img src={images[3]} width={120} height={120} alt="" />
-                    </div>  <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    </div>  <div className="col-3 one   p-0" onClick={() => {
 
                         setinfo(data[4])
                         setpic(images[4])
@@ -110,13 +110,13 @@ export default function DietCard({ mineral, image }) {
 
                 </div>
                 <div className="row justify-content-between w-100">
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one   p-0" onClick={() => {
                         setinfo(data[5])
                         setpic(images[5])
                         makeenable(true)
                     }}  >
                         <img src={images[5]} width={120} height={120} alt="" />
-                    </div>  <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    </div>  <div className="col-3 one   p-0" onClick={() => {
                         setinfo(data[6])
                         setpic(images[6])
                         makeenable(true)
@@ -124,8 +124,8 @@ export default function DietCard({ mineral, image }) {
                         <img src={images[6]} width={120} height={120} alt="" />
                     </div>
                 </div>
-                <div className="row justify-content-around px-5  w-100">
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+                <div className="row justify-content-md-around justify-content-between px-md-5 px-0  w-100">
+                    <div className="col-3 one   p-0" onClick={() => {
 
                         setinfo(data[7])
                         setpic(images[7])
@@ -133,7 +133,7 @@ export default function DietCard({ mineral, image }) {
                     }}  >
                         <img src={images[7]} width={120} height={120} alt="" />
                     </div>
-                    <div className="col-3 one last  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one last   p-0" onClick={() => {
 
                         setinfo(data[8])
                         setpic(images[8])
@@ -141,7 +141,7 @@ export default function DietCard({ mineral, image }) {
                     }}  >
                         <img src={images[8]} width={120} height={120} alt="" />
                     </div>
-                    <div className="col-3 one  bg-danger p-0" onClick={() => {
+                    <div className="col-3 one   p-0" onClick={() => {
 
                         setinfo(data[9])
                         setpic(images[9])
@@ -150,6 +150,23 @@ export default function DietCard({ mineral, image }) {
                         <img src={images[9]} width={120} height={120} alt="" />
                     </div>
                 </div>
+            </div>
+
+            <div className="d-sm-none d-flex justify-content-around align-items center flex-wrap gap-3 short">
+                {
+                    images.map((item, i) => {
+                        return (
+                            <div className=" shortp p-0" onClick={() => {
+
+                                setinfo(data[i])
+                                setpic(item)
+                                makeenable(true)
+                            }}  >
+                                <img src={item} width={120} height={120} alt="" />
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div >
     )

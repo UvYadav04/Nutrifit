@@ -45,24 +45,24 @@ export default function Workout() {
     return (
         <div className="workout bg bg-white w-100">
             <Navbar />
-            <div className="container-fluid mt-4 p-0 w-100 ">
-                <div className="row w-100 p-0">
+            <div className="container-fluid mt-4 py-0 w-100 px-1">
+                <div className="row w-100 px-1 py-0">
                     <div className=" gymrow row w-100 p-0 border-bottom">
-                        <div className="col-2 text-center fs-3 text-primary f3 py-2">Exercise</div>
-                        <div className="col-2 text-center fs-3 text-primary f3 py-2">Sets</div>
-                        <div className="col-2 text-center fs-3 text-primary f3 py-2">Reps</div>
-                        <div className="col-3 text-center fs-3 text-primary f3 py-2 ">Target Muscle</div>
-                        <div className="col-3 text-center fs-3 text-primary f3 py-2 ">Technique</div>
+                        <div className="col-md-2 col-3 text-center fs-3 text-primary f3 py-2 d-sm-inline d-none">Exercise</div>
+                        <div className="col-md-2 col-sm-3 col-4 text-center fs-3 text-primary f3 py-2">Sets</div>
+                        <div className="col-md-2 col-sm-3 col-4 text-center fs-3 text-primary f3 py-2 ">Reps</div>
+                        <div className="col-3 text-center fs-3 text-primary f3 py-2 d-md-inline d-none">Target Muscle</div>
+                        <div className="col-sm-3 col-4 text-center fs-3 text-primary f3 py-2 ">Technique</div>
                     </div>
                 </div>
                 {
                     data.length > 0 ? data.map(item => {
                         return <div className=" gymrow row w-100 p-0 border-bottom">
-                            <div className="col-2 text-center  pt-3 fs-5 text-black f3">{item.Name}</div>
-                            <div className="col-2 text-center  pt-3 fs-5 text-black f3">{item.Sets} Sets</div>
-                            <div className="col-2 text-center  pt-3 fs-5 text-black f3">{item.Reps} Reps</div>
-                            <div className="col-3 text-center  p-2 t4">{item.Target_Muscle[0]} <img src={findimage(item.image)} className='bg bg-transparent' height={100} width={100} alt="" /></div>
-                            <div className="col-3 text-center  p-2"><img src={findgif(item.gif)} height={100} width={100} alt="" /></div>
+                            <div className="col-md-2 col-3 text-center  pt-3 fs-5 text-black f3 d-sm-inline d-none">{item.Name}</div>
+                            <div className="col-md-2 col-sm-3 col-4 text-center  pt-3 fs-5 text-black f3">{item.Sets} Sets</div>
+                            <div className="col-md-2 col-sm-3 col-4 text-center  pt-3 fs-5 text-black f3">{item.Reps} Reps</div>
+                            <div className="col-3 text-center  p-2 t4 d-md-inline d-none">{item.Target_Muscle[0]} <img src={findimage(item.image)} className='bg bg-transparent' height={100} width={100} alt="" /></div>
+                            <div className="col-sm-3 col-4   text-center  p-2"><img src={findgif(item.gif)} height={100} width={100} alt="" /></div>
                         </div>
                     }) : null
                 }

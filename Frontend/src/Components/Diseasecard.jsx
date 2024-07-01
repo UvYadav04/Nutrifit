@@ -36,10 +36,18 @@ export default function Diseasecard({ name, from }) {
         // console.log(pic)
     }, [])
     return (
-        <div className={!loading ? "card col-3 text-start bg bg-transparent border-none" : "card col-3 text-start bg bg-transparent border-none opacity-50"}>
-            <img src={pic} width={250} height={250} className={!loading ? 'mx-auto rounded-2' : "d-none"} alt="will be fixed soon" />
-            <img src={logo} width={250} height={250} className={loading ? 'mx-auto rounded-2' : "d-none"} alt="" />
-            <h4 className={from !== "info" ? 'dname ms-1' : "d-none"}>{name}</h4>
-        </div>
+        <>
+            <div className={from === 'treat' ? "d-block" : "d-none"}><div className={!loading ? "card col-md-3 col-sm-4 col-5 text-start bg bg-transparent border-none" : "card col-3 text-start bg bg-transparent border-none opacity-50"}>
+                <img src={pic} width={250} height={250} className={!loading ? 'mx-auto rounded-2 w-100' : "d-none"} alt="will be fixed soon" />
+                <img src={logo} width={250} height={250} className={loading ? 'mx-auto rounded-2' : "d-none"} alt="" />
+                <h4 className={from !== "info" ? 'dname ms-1' : "d-none"}>{name}</h4>
+            </div>
+            </div>
+            <div className={from === 'info' ? "d-block" : "d-none"}><div className={!loading ? "card col-12 text-start bg bg-transparent border-none" : "card col-10 text-start bg bg-transparent border-none opacity-50"}>
+                <img src={pic} className={!loading ? 'mx-auto rounded-2 w-100' : "d-none"} alt="will be fixed soon" />
+            </div>
+            </div>
+
+        </>
     )
 }
