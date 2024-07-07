@@ -38,7 +38,7 @@ export default function Login() {
 
     const handleloginsubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("http://localhost:8080/register/login", {
+        const response = await fetch("https://nutrifitbackend.onrender.com/register/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ export default function Login() {
         // console.log("data : ", userdata);
 
         e.preventDefault();
-        const response = await fetch("http://localhost:8080/register/signup", {
+        const response = await fetch("https://nutrifitbackend.onrender.com/register/signup", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

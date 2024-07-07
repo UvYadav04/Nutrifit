@@ -7,7 +7,7 @@ export default function DietCard({ mineral, image }) {
     const [enable, makeenable] = useState(false)
     const [images, setimages] = useState([])
     const getresult = async () => {
-        const data = await fetch("http://localhost:8080/diet/getdata", {
+        const data = await fetch("https://nutrifitbackend.onrender.com/diet/getdata", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

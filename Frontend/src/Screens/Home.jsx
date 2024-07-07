@@ -8,7 +8,7 @@ export default function Home() {
         if (token) {
             // console.log(`got token : `, token)
             const username = localStorage.getItem('username')
-            const response = await fetch("http://localhost:8080/user/userdata", {
+            const response = await fetch("https://nutrifitbackend.onrender.com/user/userdata", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ export default function Home() {
                     password: json.password,
                     jwt: true
                 }
-                const response2 = await fetch("http://localhost:8080/register/login", {
+                const response2 = await fetch("https://nutrifitbackend.onrender.com/register/login", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

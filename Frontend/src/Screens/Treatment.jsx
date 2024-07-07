@@ -14,7 +14,7 @@ export default function Treatment() {
         if (event.target.value !== "") {
             let d = event.target.value
             setloading(true)
-            const response = await fetch("http://localhost:8080/treatment/search", {
+            const response = await fetch("https://nutrifitbackend.onrender.com/treatment/search", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

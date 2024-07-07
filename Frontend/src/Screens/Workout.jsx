@@ -8,7 +8,7 @@ export default function Workout() {
     const getdata = async (state) => {
         // console.log(state)
         let day = state[0], level = state[1]
-        const response = await fetch("http://localhost:8080/workout/getdata", {
+        const response = await fetch("https://nutrifitbackend.onrender.com/workout/getdata", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

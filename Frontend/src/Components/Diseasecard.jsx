@@ -5,7 +5,7 @@ export default function Diseasecard({ name, from }) {
     const [loading, setloading] = useState(false)
     const getresult = async () => {
         setloading(true)
-        const response = await fetch("http://localhost:8080/treatment/getimages", {
+        const response = await fetch("https://nutrifitbackend.onrender.com/treatment/getimages", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
