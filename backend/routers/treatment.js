@@ -20,7 +20,7 @@ router.post('/getimages', async (req, res) => {
         const name = req.body.name
         const response = await fetch(`https://pixabay.com/api/?key=43206025-f2d5ff78cb18fce06c7cbc662&q=${name}&image_type=photo&pretty=true`)
         const json = await response.json()
-        console.log(json.hits[0])
+        // console.log(json.hits[0])
         res.json({ success: true, results: json })
     }
     catch (e) {

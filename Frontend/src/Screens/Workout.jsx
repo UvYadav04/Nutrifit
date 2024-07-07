@@ -6,7 +6,7 @@ export default function Workout() {
     const [data, setdata] = useState([])
 
     const getdata = async (state) => {
-        console.log(state)
+        // console.log(state)
         let day = state[0], level = state[1]
         const response = await fetch("http://localhost:8080/workout/getdata", {
             method: "POST",
@@ -18,7 +18,7 @@ export default function Workout() {
         })
         const json = await response.json()
         if (json.success) {
-            console.log(json)
+            // console.log(json)
             setdata(json.data)
         }
     }
@@ -31,7 +31,7 @@ export default function Workout() {
     }
     const findgif = (id) => {
         let state = location.state
-        console.log(state)
+        // console.log(state)
         // let image = require(`../workout_data/Nutrifit/Intermediate_Level/day01/gifs/Dumbbell-Row.gif`)
         let image = require(`../workout_data/Nutrifit/${state[1]}/${state[0]}/gifs/${id}.gif`)
         return image
@@ -39,7 +39,7 @@ export default function Workout() {
 
     useEffect(() => {
         let state = location.state
-        console.log(state)
+        // console.log(state)
         getdata(state)
     }, [])
     return (

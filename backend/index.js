@@ -12,7 +12,7 @@ const mongoose = require('mongoose')
 app.set('view engine', "ejs")
 app.set('views', path.join(__dirname, "/views"))
 
-mongoose.connect("mongodb://0.0.0.0:27017/nutrifit")
+mongoose.connect("mongodb+srv://uvyadav04:uvyadav123@cluster1.ae0pw2e.mongodb.net/Nutrifit", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("connected to mongo")
     })
