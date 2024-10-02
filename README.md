@@ -14,3 +14,5 @@
 - **Authentication**: JWT for secure user authentication
 - **API Integration**: For external services
 
+4. ## 🌐 Visit
+You can check out the live website at [HODO](https://nutrifit-2lm8.onrender.com/).
